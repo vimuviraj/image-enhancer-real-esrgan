@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Image Result</title>
+    <style>
+        /* Add CSS styles to control the image size */
+        img {
+            width: 50%; /* Set the width of the image to 50% of the container */
+            height: auto; /* Maintain the aspect ratio */
+            max-width: 500px; /* Set the maximum width of the image */
+        }
+    </style>
+</head>
+<body>
+    <h1>Enhanced Image</h1>
+    <img src="{{ url_for('static', filename='input_out.png') }}" alt="Enhanced Image">
+    
+    <!-- Add a download link for the enhanced image -->
+    <br><br>
+    <a href="{{ url_for('download_enhanced_image') }}" download>Download Enhanced Image</a>
+
+    <!-- Add a link to navigate back to the home page -->
+    <br><br>
+    <a href="{{ url_for('home') }}">Back to Home</a>
+</body>
+</html>
+
